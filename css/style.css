@@ -32,7 +32,8 @@ h3 span {
 @media only screen and (max-width: 550px) {
 
   #mybtn {
-    font-size: 10px;
+    font-size: 8px;
+    padding: 2px;
   }
 
   #instructions {
