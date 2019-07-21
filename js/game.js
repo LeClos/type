@@ -83,20 +83,20 @@ function startMatch() {
     score++;
     if (highScore < score) {
       highScore = score;
-      HighDisplay.innerHTML = highScore;
+      $(HighDisplay).html(highScore);
     }
   }
   if (score === -1) {
-    scoreDisplay.innerHTML = 0;
+    $(scoreDisplay).html(0);
   } else {
-    scoreDisplay.innerHTML = score;
+    $(scoreDisplay).html(score);
   }
 }
 
 // matching words functio
 function matchWords() {
   if (wordInput.value === currentWord.innerHTML) {
-    message.innerHTML = 'Correct!!!';
+    $(message).html('<span style="color: green;">Correct!!!</span>');
     return true;
   } else {
     message.innerHTML = '';
@@ -113,35 +113,51 @@ function countdown() {
     isPlaying = false;
   }
   // displaying time
-  timeDisplay.innerHTML = time;
+  $(timeDisplay).html(time);
 }
 
 // changing difficulty
-easyButton.addEventListener('click', function (event) {
+$(easyButton).click(function () {
   currentLevel = levels.easy;
   score = -1;
-  message.innerHTML = "difficulty changed to easy";
-  seconds.innerHTML = levels.easy;
-
+  $(message)
+    .html('difficulty changed to <span style="color: green;">easy</span>')
+    .css('display', 'none')
+    .fadeIn(250);
+  $(seconds).html(levels.easy);
+  $(timeDisplay).html(levels.easy);
+  time = levels.easy;
 });
-mediumButton.addEventListener('click', function (event) {
+
+$(mediumButton).click(function () {
   currentLevel = levels.medium;
   score = -1;
-  message.innerHTML = "difficulty changed to medium";
-  seconds.innerHTML = levels.medium;
-
+  $(message)
+    .html('difficulty changed to <span style="color: orange;">medium</span>')
+    .css('display', 'none')
+    .fadeIn(250);
+  $(seconds).html(levels.medium);
+  $(timeDisplay).html(levels.medium);
+  time = levels.medium;
 });
-hardButton.addEventListener('click', function (event) {
+
+$(hardButton).click(function () {
   currentLevel = levels.hard;
   score = -1;
-  message.innerHTML = "difficulty changed to hard";
-  seconds.innerHTML = levels.hard;
-
+  $(message)
+    .html('difficulty changed to <span style="color: red;">hard</span>')
+    .css('display', 'none')
+    .fadeIn(250);
+  $(seconds).html(levels.hard);
+  $(timeDisplay).html(levels.hard);
+  time = levels.hard;
 });
 
 function checkStatus() {
-  if (!isPlaying && time === 0 && message.innerHTML != "difficulty changed to easy" && message.innerHTML != "difficulty changed to medium" && message.innerHTML != "difficulty changed to hard" && score != 0) {
-    message.innerHTML = 'Game over, you lose!';
+  if (!isPlaying && time === 0 && message.innerHTML != "difficulty changed to easy" &&
+    message.innerHTML != "difficulty changed to medium" &&
+    message.innerHTML != "difficulty changed to hard" && score != 0) {
+    $(message).html('Game over, <b>you lose!</b>');
     score = -1;
     if (wordInput.value != '') {
       message.innerHTML = '';
@@ -153,3 +169,14 @@ function checkStatus() {
     message.innerHTML = '';
   }
 }
+
+// some jquery effects
+$(document).ready(function () {
+  $('#panel').click(function () {
+    $('#instructions').slideToggle("slow");
+  });
+
+  $('.btn').fadeIn(1000);
+  $('#current-word').fadeIn(1000);
+
+});

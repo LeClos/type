@@ -13,6 +13,25 @@ h3 span {
   padding-bottom: 20px;
 }
 
+#instructions {
+  display: none;
+}
+
+.btn {
+  display: none;
+}
+
+#ebutton:active,
+#mbutton:active,
+#hbutton:active {
+  background-color: red;
+}
+
+
+#current-word {
+  display: none;
+}
+
 @media only screen and (max-width: 1200px) {
   #current-word {
     font-size: 80px;
@@ -71,4 +90,9 @@ h3 span {
     font-size: 10px;
   }
 
+}
+
+/* classes */
+.active {
+  background-color: red;
 }
