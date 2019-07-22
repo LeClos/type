@@ -32,6 +32,8 @@ h3 span {
   display: none;
 }
 
+
+/* media queries */
 @media only screen and (max-width: 1200px) {
   #current-word {
     font-size: 80px;
