@@ -1,88 +1,116 @@
 h1 {
-  color: white; }
+  color: white;
+  font-weight: 100;
+}
 
 h3 {
   font-size: 20px;
-  color: #5a5a5a; }
-  h3 span {
-    color: #ff9100; }
+  color: #5a5a5a;
+}
+h3 span {
+  color: #ff9100;
+}
 
 #current-word {
   font-size: 120px;
   font-weight: 10;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+}
 
 #instructions {
-  display: none; }
+  display: none;
+}
 
 .btn {
   display: none;
-  background-color: #ff9100; }
+  background-color: #ff9100;
+}
 
 #mybtn {
   position: absolute;
   top: 20px;
-  right: 20px; }
+  right: 20px;
+}
 
 #seconds {
-  color: #ff9100; }
+  color: green;
+  font-weight: 500;
+}
 
 #ebutton:active,
 #mbutton:active,
 #hbutton:active {
-  background-color: red; }
+  background-color: red;
+}
 
 #current-word {
-  display: none; }
+  display: none;
+}
 
 #panel {
-  margin-top: 50px; }
+  margin-top: 50px;
+}
 
 /* media queries */
 @media only screen and (max-width: 1200px) {
   #current-word {
-    font-size: 80px; }
+    font-size: 80px;
+  }
 
   .lead {
     font-size: 16px;
     padding: 0;
-    margin: 0; }
+    margin: 0;
+  }
 
   #mybtn {
-    font-size: 12px; } }
+    font-size: 12px;
+  }
+}
 @media only screen and (max-width: 550px) {
   #mybtn {
     font-size: 8px;
-    padding: 2px; }
+    padding: 2px;
+  }
 
   #instructions {
-    font-size: 12px; }
+    font-size: 12px;
+  }
 
   #headerr h1 {
-    font-size: 26px; }
+    font-size: 26px;
+  }
 
   #current-word {
-    font-size: 50px; }
+    font-size: 50px;
+  }
 
   .lead {
-    font-size: 12px; }
+    font-size: 12px;
+  }
 
   #stats h3 {
-    font-size: 16px; }
+    font-size: 16px;
+  }
 
   #word-input {
     max-height: 30px;
-    font-size: 16px; }
+    font-size: 16px;
+  }
 
   #message {
-    font-size: 14px; }
+    font-size: 14px;
+  }
 
   #ebutton,
   #mbutton,
   #hbutton {
-    font-size: 10px; } }
+    font-size: 10px;
+  }
+}
 /* classes */
 .active {
-  background-color: red; }
+  background-color: red;
+}
 
 /*# sourceMappingURL=style.css.map */
