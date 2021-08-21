@@ -1,6 +1,5 @@
 h1 {
   color: white;
-  font-weight: 100;
 }
 
 h3 {
@@ -24,17 +23,25 @@ h3 span {
 .btn {
   display: none;
   background-color: #ff9100;
+  border: none;
 }
 
 #mybtn {
   position: absolute;
   top: 20px;
   right: 20px;
+  border: none;
+}
+
+#mybtn:hover {
+  background-color: #ff1e00;
+  color: white;
+  transform: scale(1.08);
+  transition: 0.2s ease-in-out 0s;
 }
 
 #seconds {
-  color: green;
-  font-weight: 500;
+  color: #ff9100;
 }
 
 #ebutton:active,
@@ -43,12 +50,33 @@ h3 span {
   background-color: red;
 }
 
+#hbutton:hover {
+  background-color: red;
+  color: white;
+  transform: scale(1.08);
+  transition: 0.2s ease-in-out 0s;
+}
+
+#mbutton:hover {
+  background-color: yellow;
+  transform: scale(1.08);
+  transition: 0.2s ease-in-out 0s;
+}
+
+#ebutton:hover {
+  background-color: green;
+  color: white;
+  transform: scale(1.08);
+  transition: 0.2s ease-in-out 0s;
+}
+
 #current-word {
   display: none;
 }
 
 #panel {
   margin-top: 50px;
+  cursor: pointer;
 }
 
 /* media queries */
@@ -103,8 +131,8 @@ h3 span {
   }
 
   #ebutton,
-  #mbutton,
-  #hbutton {
+#mbutton,
+#hbutton {
     font-size: 10px;
   }
 }

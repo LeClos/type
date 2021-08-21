@@ -26,12 +26,21 @@ h3 {
 .btn {
   display: none;
   background-color: $mainColor;
+  border: none;
 }
 
 #mybtn {
   position: absolute;
   top: 20px;
   right: 20px;
+  border: none;
+}
+
+#mybtn:hover{
+  background-color: rgb(255, 30, 0);
+  color: white;
+  transform: scale(1.08);
+  transition: .2s ease-in-out 0s;
 }
 
 #seconds {
@@ -44,6 +53,26 @@ h3 {
   background-color: red;
 }
 
+#hbutton:hover {
+  background-color: red;
+  color: white;
+  transform: scale(1.08);
+  transition: .2s ease-in-out 0s;
+}
+
+#mbutton:hover {
+  background-color: yellow;
+  transform: scale(1.08);
+  transition: .2s ease-in-out 0s;
+}
+
+#ebutton:hover {
+  background-color: green;
+  color: white;
+  transform: scale(1.08);
+  transition: .2s ease-in-out 0s;
+}
+
 
 #current-word {
   display: none;
@@ -51,6 +80,7 @@ h3 {
 
 #panel {
   margin-top: 50px;
+  cursor: pointer;
 }
 
 /* media queries */
