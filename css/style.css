@@ -6,8 +6,9 @@ h3 {
   font-size: 20px;
   color: #5a5a5a;
 }
+
 h3 span {
-  color: #ff9100;
+  color: #ff6600;
 }
 
 #current-word {
@@ -22,7 +23,12 @@ h3 span {
 
 .btn {
   display: none;
-  background-color: #ff9100;
+  background: #ff6600;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#f5af19), to(#ff6600));
+  background: linear-gradient(to right, #f5af19, #ff6600);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border: none;
 }
 
@@ -31,17 +37,23 @@ h3 span {
   top: 20px;
   right: 20px;
   border: none;
+  border-radius: 15px;
 }
 
 #mybtn:hover {
-  background-color: #ff1e00;
   color: white;
-  transform: scale(1.08);
-  transition: 0.2s ease-in-out 0s;
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
+  -webkit-transition: .2s ease-in-out 0s;
+  transition: .2s ease-in-out 0s;
 }
 
 #seconds {
-  color: #ff9100;
+  color: #ff6600;
+}
+
+#ebutton, #mbutton, #hbutton {
+  border-radius: 15px;
 }
 
 #ebutton:active,
@@ -51,23 +63,29 @@ h3 span {
 }
 
 #hbutton:hover {
-  background-color: red;
+  background: red;
   color: white;
-  transform: scale(1.08);
-  transition: 0.2s ease-in-out 0s;
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+  -webkit-transition: .2s ease-in-out 0s;
+  transition: .2s ease-in-out 0s;
 }
 
 #mbutton:hover {
-  background-color: yellow;
-  transform: scale(1.08);
-  transition: 0.2s ease-in-out 0s;
+  background: yellow;
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+  -webkit-transition: .2s ease-in-out 0s;
+  transition: .2s ease-in-out 0s;
 }
 
 #ebutton:hover {
-  background-color: green;
+  background: green;
   color: white;
-  transform: scale(1.08);
-  transition: 0.2s ease-in-out 0s;
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+  -webkit-transition: .2s ease-in-out 0s;
+  transition: .2s ease-in-out 0s;
 }
 
 #current-word {
@@ -77,6 +95,7 @@ h3 span {
 #panel {
   margin-top: 50px;
   cursor: pointer;
+  border-radius: 15px;
 }
 
 /* media queries */
@@ -84,61 +103,52 @@ h3 span {
   #current-word {
     font-size: 80px;
   }
-
   .lead {
     font-size: 16px;
     padding: 0;
     margin: 0;
   }
-
   #mybtn {
     font-size: 12px;
   }
 }
+
 @media only screen and (max-width: 550px) {
   #mybtn {
     font-size: 8px;
     padding: 2px;
   }
-
   #instructions {
     font-size: 12px;
   }
-
   #headerr h1 {
     font-size: 26px;
   }
-
   #current-word {
     font-size: 50px;
   }
-
   .lead {
     font-size: 12px;
   }
-
   #stats h3 {
     font-size: 16px;
   }
-
   #word-input {
     max-height: 30px;
     font-size: 16px;
   }
-
   #message {
     font-size: 14px;
   }
-
   #ebutton,
-#mbutton,
-#hbutton {
+  #mbutton,
+  #hbutton {
     font-size: 10px;
   }
 }
+
 /* classes */
 .active {
   background-color: red;
 }
-
 /*# sourceMappingURL=style.css.map */
